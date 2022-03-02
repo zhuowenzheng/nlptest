@@ -4,7 +4,7 @@ def Forward_MM(user_dict, sentence):
     '''
     :param user_dict:
     :param sentence:
-    :return:
+    :return: result of forward max match
     '''
     max_len = max([len(item) for item in user_dict]) # 取最长的词
     start = 0
@@ -27,7 +27,7 @@ def Backward_MM(user_dict, sentence):
     '''
     :param user_dict:
     :param sentence:
-    :return:
+    :return: result of backward max match
     '''
     length = max([len(item) for item in user_dict]) # 取最长的词
     start = len(sentence)
@@ -46,7 +46,9 @@ def Backward_MM(user_dict, sentence):
 
 def Bidirectional_MM(user_dict,sentence):
     '''
-    双向最大匹配
+    :param user_dict:
+    :param sentence:
+    :return: result of bidirectional max match, print the result
     '''
     FMM_result = Forward_MM(user_dict, sentence)
     BMM_result = Backward_MM(user_dict, sentence)
