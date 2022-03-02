@@ -1,3 +1,5 @@
+#A simple NLP Chinese Word Segmentation system
+
 import numpy as np
 
 def Forward_MM(user_dict, sentence):
