@@ -19,8 +19,7 @@ def Forward_MM(user_dict, sentence):
                 start = index
                 break
             index += -1
-    for item in result:
-        print(item, end='/')
+    return result
 
 
 def Backward_MM(user_dict, sentence):
